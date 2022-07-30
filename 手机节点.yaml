@@ -5,25 +5,8 @@ mode: Rule
 log-level: info
 external-controller: ':9090'
 proxies:
-  - {"type":"ss","name":"SS|香港A01|原生解锁","server":"116.63.103.11","port":45251,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
-  - {"type":"ss","name":"SS|新加坡B01|IDC|解锁","server":"14.119.87.189","port":45144,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
-  - {"type":"ss","name":"VIP|新加坡|IEPL|3.5x|Lite","server":"gyie.51vv.top","port":55304,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"vmess","name":"V2|日本B01|IDC|解锁","server":"14.119.87.189","port":"45184","uuid":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"VIP|台湾|中转|03|Lite","server":"gy.51vv.top","port":32009,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"vmess","name":"V2|新加坡B01|IDC|解锁","server":"14.119.87.189","port":"45149","uuid":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"VIP|新加坡|中转|01|Lite","server":"gy.51vv.top","port":31012,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|日本|中转|01|Lite","server":"gy.51vv.top","port":32003,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|新加坡|中转|02|Lite","server":"gy.51vv.top","port":31011,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"SS|香港A01|IDC|解锁","server":"116.63.103.11","port":45240,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
-  - {"type":"ss","name":"VIP|韩国|中转|01|Lite","server":"gy.51vv.top","port":32001,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|日本|中转|03|Lite","server":"gy.51vv.top","port":31008,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"vmess","name":"V2|香港A01|原生解锁","server":"116.63.103.11","port":"45250","uuid":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"ss","name":"VIP|韩国|IEPL|3.5x|Lite","server":"gyie.51vv.top","port":55305,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|台湾|中转|01|Lite","server":"gy.51vv.top","port":32010,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|日本|IEP|3.5x|Lite","server":"gyie.51vv.top","port":55302,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|日本|中转|04|Lite","server":"gy.51vv.top","port":31007,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|台湾|IEPL|3.5x|Lite","server":"gyie.51vv.top","port":55303,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"SS|日本B01|IDC|解锁","server":"14.119.87.189","port":45183,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
+  - {"type":"vmess","name":"TW02-V2-GDGZ","ws-opts":{"path":"/live","headers":{"host":"cctv.com"}},"server":"gdgz.henet.cyou","port":"30005","uuid":"be28b26e-36cb-4c3b-ba4d-1f8f9cb09741","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"HK01-V2-GZGZ","ws-opts":{"path":"/live","headers":{"host":"cctv.com"}},"server":"gdgz.henet.cyou","port":"30001","uuid":"be28b26e-36cb-4c3b-ba4d-1f8f9cb09741","alterId":"0","cipher":"auto","network":"ws"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -32,98 +15,30 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - SS|香港A01|原生解锁
-      - SS|新加坡B01|IDC|解锁
-      - VIP|新加坡|IEPL|3.5x|Lite
-      - V2|日本B01|IDC|解锁
-      - VIP|台湾|中转|03|Lite
-      - V2|新加坡B01|IDC|解锁
-      - VIP|新加坡|中转|01|Lite
-      - VIP|日本|中转|01|Lite
-      - VIP|新加坡|中转|02|Lite
-      - SS|香港A01|IDC|解锁
-      - VIP|韩国|中转|01|Lite
-      - VIP|日本|中转|03|Lite
-      - V2|香港A01|原生解锁
-      - VIP|韩国|IEPL|3.5x|Lite
-      - VIP|台湾|中转|01|Lite
-      - VIP|日本|IEP|3.5x|Lite
-      - VIP|日本|中转|04|Lite
-      - VIP|台湾|IEPL|3.5x|Lite
-      - SS|日本B01|IDC|解锁
+      - TW02-V2-GDGZ
+      - HK01-V2-GZGZ
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - SS|香港A01|原生解锁
-      - SS|新加坡B01|IDC|解锁
-      - VIP|新加坡|IEPL|3.5x|Lite
-      - V2|日本B01|IDC|解锁
-      - VIP|台湾|中转|03|Lite
-      - V2|新加坡B01|IDC|解锁
-      - VIP|新加坡|中转|01|Lite
-      - VIP|日本|中转|01|Lite
-      - VIP|新加坡|中转|02|Lite
-      - SS|香港A01|IDC|解锁
-      - VIP|韩国|中转|01|Lite
-      - VIP|日本|中转|03|Lite
-      - V2|香港A01|原生解锁
-      - VIP|韩国|IEPL|3.5x|Lite
-      - VIP|台湾|中转|01|Lite
-      - VIP|日本|IEP|3.5x|Lite
-      - VIP|日本|中转|04|Lite
-      - VIP|台湾|IEPL|3.5x|Lite
-      - SS|日本B01|IDC|解锁
+      - TW02-V2-GDGZ
+      - HK01-V2-GZGZ
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - SS|香港A01|原生解锁
-      - SS|新加坡B01|IDC|解锁
-      - VIP|新加坡|IEPL|3.5x|Lite
-      - V2|日本B01|IDC|解锁
-      - VIP|台湾|中转|03|Lite
-      - V2|新加坡B01|IDC|解锁
-      - VIP|新加坡|中转|01|Lite
-      - VIP|日本|中转|01|Lite
-      - VIP|新加坡|中转|02|Lite
-      - SS|香港A01|IDC|解锁
-      - VIP|韩国|中转|01|Lite
-      - VIP|日本|中转|03|Lite
-      - V2|香港A01|原生解锁
-      - VIP|韩国|IEPL|3.5x|Lite
-      - VIP|台湾|中转|01|Lite
-      - VIP|日本|IEP|3.5x|Lite
-      - VIP|日本|中转|04|Lite
-      - VIP|台湾|IEPL|3.5x|Lite
-      - SS|日本B01|IDC|解锁
+      - TW02-V2-GDGZ
+      - HK01-V2-GZGZ
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - SS|香港A01|原生解锁
-      - SS|新加坡B01|IDC|解锁
-      - VIP|新加坡|IEPL|3.5x|Lite
-      - V2|日本B01|IDC|解锁
-      - VIP|台湾|中转|03|Lite
-      - V2|新加坡B01|IDC|解锁
-      - VIP|新加坡|中转|01|Lite
-      - VIP|日本|中转|01|Lite
-      - VIP|新加坡|中转|02|Lite
-      - SS|香港A01|IDC|解锁
-      - VIP|韩国|中转|01|Lite
-      - VIP|日本|中转|03|Lite
-      - V2|香港A01|原生解锁
-      - VIP|韩国|IEPL|3.5x|Lite
-      - VIP|台湾|中转|01|Lite
-      - VIP|日本|IEP|3.5x|Lite
-      - VIP|日本|中转|04|Lite
-      - VIP|台湾|IEPL|3.5x|Lite
-      - SS|日本B01|IDC|解锁
+      - TW02-V2-GDGZ
+      - HK01-V2-GZGZ
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -143,25 +58,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - SS|香港A01|原生解锁
-      - SS|新加坡B01|IDC|解锁
-      - VIP|新加坡|IEPL|3.5x|Lite
-      - V2|日本B01|IDC|解锁
-      - VIP|台湾|中转|03|Lite
-      - V2|新加坡B01|IDC|解锁
-      - VIP|新加坡|中转|01|Lite
-      - VIP|日本|中转|01|Lite
-      - VIP|新加坡|中转|02|Lite
-      - SS|香港A01|IDC|解锁
-      - VIP|韩国|中转|01|Lite
-      - VIP|日本|中转|03|Lite
-      - V2|香港A01|原生解锁
-      - VIP|韩国|IEPL|3.5x|Lite
-      - VIP|台湾|中转|01|Lite
-      - VIP|日本|IEP|3.5x|Lite
-      - VIP|日本|中转|04|Lite
-      - VIP|台湾|IEPL|3.5x|Lite
-      - SS|日本B01|IDC|解锁
+      - TW02-V2-GDGZ
+      - HK01-V2-GZGZ
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
