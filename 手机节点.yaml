@@ -5,20 +5,15 @@ mode: Rule
 log-level: info
 external-controller: ':9090'
 proxies:
-  - {"type":"ss","name":"美国+Oracle","server":"36-138-222-125.nhost.00cdn.com","port":35016,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"ss","name":"日本+Sphere","server":"36-138-222-125.nhost.00cdn.com","port":35007,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"ss","name":"日本+IDCF","server":"36-138-222-125.nhost.00cdn.com","port":35006,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"trojan","name":"香港-V3DP","server":"iplchk1.bitznet.cloud","port":34443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"trojan","name":"tg分享频道@fffffx2","server":"iplchk1.bitznet.cloud","port":32443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"ss","name":"新加坡+Melbicom","server":"183-232-230-214.nhost.00cdn.com","port":35022,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"ss","name":"日本+Oracle","server":"36-138-222-125.nhost.00cdn.com","port":35020,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
+  - {"type":"trojan","name":"香港-V2DP","server":"trahk1.bitznet.cloud","port":32443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
+  - {"type":"ss","name":"德国+Oracle","server":"103-56-62-105.nhost.00cdn.com","port":35028,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
   - {"type":"trojan","name":"新加坡-V3DP","server":"iplcsg1.bitznet.cloud","port":34006,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"trojan","name":"香港-V3HKT","server":"iplchk3.bitznet.cloud","port":34000,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"ss","name":"香港+Neko","server":"183-232-230-214.nhost.00cdn.com","port":35000,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"ss","name":"日本+Linode","server":"36-138-222-125.nhost.00cdn.com","port":35005,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"ss","name":"VIP|新加坡|中转|01|Lite","server":"gy.51vv.top","port":31012,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"印度+Linode","server":"183-232-230-214.nhost.00cdn.com","port":35020,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
-  - {"type":"trojan","name":"香港-V2HKT","server":"trahk5.bitznet.cloud","port":32000,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
+  - {"type":"trojan","name":"日本-V3DP","server":"iplcjp1.bitznet.cloud","port":34004,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
+  - {"type":"ss","name":"新加坡+Linode","server":"183-232-230-214.nhost.00cdn.com","port":35018,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
+  - {"type":"ss","name":"VIP|日本|IEP|3.5x|Lite","server":"gyie.51vv.top","port":55302,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
+  - {"type":"ss","name":"SS|日本A01|IDC|解锁","server":"116.63.103.11","port":45183,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
+  - {"type":"ss","name":"新加坡+Melbicom","server":"183-232-230-214.nhost.00cdn.com","port":35022,"cipher":"aes-256-gcm","password":"7bae837d-f22c-4d82-8b13-584dea1848fc"}
+  - {"type":"ss","name":"SS|香港A01|原生解锁","server":"116.63.103.11","port":45251,"cipher":"chacha20-ietf-poly1305","password":"7cbdec9d-999f-4a0c-8a41-b7ef206123b6"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -27,78 +22,58 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - 美国+Oracle
-      - 日本+Sphere
-      - 日本+IDCF
-      - 香港-V3DP
-      - tg分享频道@fffffx2
-      - 新加坡+Melbicom
-      - 日本+Oracle
+      - 香港-V2DP
+      - 德国+Oracle
       - 新加坡-V3DP
-      - 香港-V3HKT
-      - 香港+Neko
-      - 日本+Linode
-      - VIP|新加坡|中转|01|Lite
-      - 印度+Linode
-      - 香港-V2HKT
+      - 日本-V3DP
+      - 新加坡+Linode
+      - VIP|日本|IEP|3.5x|Lite
+      - SS|日本A01|IDC|解锁
+      - 新加坡+Melbicom
+      - SS|香港A01|原生解锁
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 美国+Oracle
-      - 日本+Sphere
-      - 日本+IDCF
-      - 香港-V3DP
-      - tg分享频道@fffffx2
-      - 新加坡+Melbicom
-      - 日本+Oracle
+      - 香港-V2DP
+      - 德国+Oracle
       - 新加坡-V3DP
-      - 香港-V3HKT
-      - 香港+Neko
-      - 日本+Linode
-      - VIP|新加坡|中转|01|Lite
-      - 印度+Linode
-      - 香港-V2HKT
+      - 日本-V3DP
+      - 新加坡+Linode
+      - VIP|日本|IEP|3.5x|Lite
+      - SS|日本A01|IDC|解锁
+      - 新加坡+Melbicom
+      - SS|香港A01|原生解锁
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 美国+Oracle
-      - 日本+Sphere
-      - 日本+IDCF
-      - 香港-V3DP
-      - tg分享频道@fffffx2
-      - 新加坡+Melbicom
-      - 日本+Oracle
+      - 香港-V2DP
+      - 德国+Oracle
       - 新加坡-V3DP
-      - 香港-V3HKT
-      - 香港+Neko
-      - 日本+Linode
-      - VIP|新加坡|中转|01|Lite
-      - 印度+Linode
-      - 香港-V2HKT
+      - 日本-V3DP
+      - 新加坡+Linode
+      - VIP|日本|IEP|3.5x|Lite
+      - SS|日本A01|IDC|解锁
+      - 新加坡+Melbicom
+      - SS|香港A01|原生解锁
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 美国+Oracle
-      - 日本+Sphere
-      - 日本+IDCF
-      - 香港-V3DP
-      - tg分享频道@fffffx2
-      - 新加坡+Melbicom
-      - 日本+Oracle
+      - 香港-V2DP
+      - 德国+Oracle
       - 新加坡-V3DP
-      - 香港-V3HKT
-      - 香港+Neko
-      - 日本+Linode
-      - VIP|新加坡|中转|01|Lite
-      - 印度+Linode
-      - 香港-V2HKT
+      - 日本-V3DP
+      - 新加坡+Linode
+      - VIP|日本|IEP|3.5x|Lite
+      - SS|日本A01|IDC|解锁
+      - 新加坡+Melbicom
+      - SS|香港A01|原生解锁
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,20 +93,15 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - 美国+Oracle
-      - 日本+Sphere
-      - 日本+IDCF
-      - 香港-V3DP
-      - tg分享频道@fffffx2
-      - 新加坡+Melbicom
-      - 日本+Oracle
+      - 香港-V2DP
+      - 德国+Oracle
       - 新加坡-V3DP
-      - 香港-V3HKT
-      - 香港+Neko
-      - 日本+Linode
-      - VIP|新加坡|中转|01|Lite
-      - 印度+Linode
-      - 香港-V2HKT
+      - 日本-V3DP
+      - 新加坡+Linode
+      - VIP|日本|IEP|3.5x|Lite
+      - SS|日本A01|IDC|解锁
+      - 新加坡+Melbicom
+      - SS|香港A01|原生解锁
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
