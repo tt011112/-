@@ -5,16 +5,13 @@ mode: Rule
 log-level: info
 external-controller: ':9090'
 proxies:
-  - {"type":"trojan","name":"香港-V3HKT","server":"iplchk3.bitznet.cloud","port":34000,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"trojan","name":"香港-V3DP","server":"iplchk1.bitznet.cloud","port":34443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"trojan","name":"default_name","server":"iplchk1.bitznet.cloud","port":32443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"vmess","name":"韩国03|한국|Microsoft|釜山|1.0","ws-opts":{"path":"/soda"},"server":"36.139.115.86","port":"19106","uuid":"3434a6d1-61fc-3d92-b550-0aaa0d99944a","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"trojan","name":"香港-V2DP","server":"trahk1.bitznet.cloud","port":32443,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"trojan","name":"新加坡-V3DP","server":"iplcsg1.bitznet.cloud","port":34006,"password":"5ac6a82b-01e6-4156-9b1b-3c6fea1c5fa0","udp":true,"skip-cert-verify":true,"sni":"cert.bitbyte.one"}
-  - {"type":"ss","name":"VIP|新加坡|中转|01|Lite","server":"gy.51vv.top","port":31012,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|台湾|中转|03|Lite","server":"gy.51vv.top","port":32009,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"ss","name":"VIP|日本|中转|02|Lite","server":"gy.51vv.top","port":32004,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
-  - {"type":"vmess","name":"日本02|AzureCloud|大阪|1.0","ws-opts":{"path":"/soda"},"server":"36.138.220.37","port":"20001","uuid":"3434a6d1-61fc-3d92-b550-0aaa0d99944a","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"ss","name":"VIP|日本|中转|03|Lite","server":"gy.51vv.top","port":31008,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
+  - {"type":"ss","name":"VIP|香港|中转|04|Lite","server":"gy.51vv.top","port":31004,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
+  - {"type":"ss","name":"VIP|韩国|IEPL|3.5x|Lite","server":"gyie.51vv.top","port":55305,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
+  - {"type":"ss","name":"VIP|香港|中转|03|Lite","server":"gy.51vv.top","port":31003,"cipher":"chacha20-ietf-poly1305","password":"db549b73-3f05-45db-8f8f-8eecd8c86a7d"}
+  - {"type":"vmess","name":"日本4-443|流媒体解锁","ws-opts":{"path":"/"},"server":"20.243.200.103","port":"443","uuid":"37602a4d-377d-39e0-af57-482ea1a209d1","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"VIP|香港|免流|01|Plus","ws-opts":{"path":"/zasasdsmkhjn"},"server":"20.222.148.197","port":"80","uuid":"db549b73-3f05-45db-8f8f-8eecd8c86a7d","alterId":"0","cipher":"auto","network":"ws"}
+  - {"type":"vmess","name":"韩国2-443|流媒体解锁","ws-opts":{"path":"/"},"server":"20.249.208.55","port":"443","uuid":"37602a4d-377d-39e0-af57-482ea1a209d1","alterId":"0","cipher":"auto","network":"ws"}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,62 +20,50 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - 香港-V3HKT
-      - 香港-V3DP
-      - default_name
-      - 韩国03|한국|Microsoft|釜山|1.0
-      - 香港-V2DP
-      - 新加坡-V3DP
-      - VIP|新加坡|中转|01|Lite
-      - VIP|台湾|中转|03|Lite
-      - VIP|日本|中转|02|Lite
-      - 日本02|AzureCloud|大阪|1.0
+      - VIP|日本|中转|03|Lite
+      - VIP|香港|中转|04|Lite
+      - VIP|韩国|IEPL|3.5x|Lite
+      - VIP|香港|中转|03|Lite
+      - 日本4-443|流媒体解锁
+      - VIP|香港|免流|01|Plus
+      - 韩国2-443|流媒体解锁
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 香港-V3HKT
-      - 香港-V3DP
-      - default_name
-      - 韩国03|한국|Microsoft|釜山|1.0
-      - 香港-V2DP
-      - 新加坡-V3DP
-      - VIP|新加坡|中转|01|Lite
-      - VIP|台湾|中转|03|Lite
-      - VIP|日本|中转|02|Lite
-      - 日本02|AzureCloud|大阪|1.0
+      - VIP|日本|中转|03|Lite
+      - VIP|香港|中转|04|Lite
+      - VIP|韩国|IEPL|3.5x|Lite
+      - VIP|香港|中转|03|Lite
+      - 日本4-443|流媒体解锁
+      - VIP|香港|免流|01|Plus
+      - 韩国2-443|流媒体解锁
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 香港-V3HKT
-      - 香港-V3DP
-      - default_name
-      - 韩国03|한국|Microsoft|釜山|1.0
-      - 香港-V2DP
-      - 新加坡-V3DP
-      - VIP|新加坡|中转|01|Lite
-      - VIP|台湾|中转|03|Lite
-      - VIP|日本|中转|02|Lite
-      - 日本02|AzureCloud|大阪|1.0
+      - VIP|日本|中转|03|Lite
+      - VIP|香港|中转|04|Lite
+      - VIP|韩国|IEPL|3.5x|Lite
+      - VIP|香港|中转|03|Lite
+      - 日本4-443|流媒体解锁
+      - VIP|香港|免流|01|Plus
+      - 韩国2-443|流媒体解锁
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 香港-V3HKT
-      - 香港-V3DP
-      - default_name
-      - 韩国03|한국|Microsoft|釜山|1.0
-      - 香港-V2DP
-      - 新加坡-V3DP
-      - VIP|新加坡|中转|01|Lite
-      - VIP|台湾|中转|03|Lite
-      - VIP|日本|中转|02|Lite
-      - 日本02|AzureCloud|大阪|1.0
+      - VIP|日本|中转|03|Lite
+      - VIP|香港|中转|04|Lite
+      - VIP|韩国|IEPL|3.5x|Lite
+      - VIP|香港|中转|03|Lite
+      - 日本4-443|流媒体解锁
+      - VIP|香港|免流|01|Plus
+      - 韩国2-443|流媒体解锁
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -98,16 +83,13 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - 香港-V3HKT
-      - 香港-V3DP
-      - default_name
-      - 韩国03|한국|Microsoft|釜山|1.0
-      - 香港-V2DP
-      - 新加坡-V3DP
-      - VIP|新加坡|中转|01|Lite
-      - VIP|台湾|中转|03|Lite
-      - VIP|日本|中转|02|Lite
-      - 日本02|AzureCloud|大阪|1.0
+      - VIP|日本|中转|03|Lite
+      - VIP|香港|中转|04|Lite
+      - VIP|韩国|IEPL|3.5x|Lite
+      - VIP|香港|中转|03|Lite
+      - 日本4-443|流媒体解锁
+      - VIP|香港|免流|01|Plus
+      - 韩国2-443|流媒体解锁
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
